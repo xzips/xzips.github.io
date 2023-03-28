@@ -255,23 +255,30 @@ section {
 
 .recent-projects {
     text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
 }
+
 
 .project {
     position: relative;
-    display: inline-block;
-    margin: 1rem;
+    display: block;
+    margin: 1rem auto;
 }
+
 
 .project-link {
     display: block;
 }
 
 .project-image {
-    width: 200px;
+    width: 300px;
     height: auto;
-    transition: 0.3s;
+    transition: 0.4s;
+    border: 3px solid #1f7bc5; /* Add this line */
 }
+
 
 .overlay {
     position: absolute;
@@ -363,14 +370,27 @@ section {
     border-radius: 4px;
     text-decoration: none;
     white-space: nowrap;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
-.project-link:hover .project-tag {
-    /*background-color: #3a9dff;*/
+
+.youtube-link {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: normal; /* Change from bold to normal */
+    font-size: 14px; /* Add font size */
+    border-radius: 2px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* ... */
+.youtube-link:hover {
+    background-color: #931610;
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
 
 
@@ -382,3 +402,105 @@ footer {
     padding: 1rem 0;
     text-align: center;
 }
+
+/* University Notes */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.course-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card-header {
+    cursor: pointer;
+}
+
+.course-title {
+    color: #ffffff;
+    margin: 0;
+}
+
+.course-description {
+    color: #aaaaaa;
+}
+
+.course-card-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(30, 143, 255, 0.153);
+    margin-top: 20px;
+}
+
+.course-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.course-link:hover {
+    text-decoration: underline;
+}
+
+.course-card.expanded {
+    width: 100%;
+    z-index: 10;
+}
+
+.course-card.expanded .course-card-content {
+    display: flex;
+}
+
+.course-card.expanded::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+.pdf-category {
+    margin-bottom: 20px;
+}
+
+.pdf-category-title {
+    color: #ffffff; /* Change the color to white */
+    margin-bottom: 10px;
+    text-decoration: underline; /* Add underline */
+    text-shadow: 2px 2px 4px #000000; /* Add shadow */
+    font-weight: bold; /* Make the font bold */
+    font-size: 18px; /* Increase the font size */
+    font-family: Arial, sans-serif; /* Change the font */
+}
+
+.pdf-button {
+    display: inline-block;
+    background-color: blue; /* Set a consistent color for all PDF buttons */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.pdf-button:hover {
+    background-color: #007bff;
+}
+
+
