@@ -246,18 +246,33 @@ section {
 }
 
 .github-contributions {
+   /* Set a fixed width for the box */
+    max-width: 80%; /* Ensure the box doesn't exceed 90% of its container's width */
     text-align: center;
+
+    /*center entire box*/
+    margin: 0 auto;
+    padding: 1rem;
+
+    border: 1px solid #2048c1;
+    
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff; /* Set the text color to white */
+    font-family: Arial, sans-serif; /* Use a
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the box */
     margin-bottom: 2rem;
 }
 
 .github-chart {
     max-width: 100%;
+    margin-bottom: 2rem;
 }
 
 .recent-projects {
     text-align: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
@@ -266,6 +281,9 @@ section {
     position: relative;
     display: block;
     margin: 1rem auto;
+    margin-left: 50px;
+
+
 }
 
 
@@ -334,11 +352,6 @@ section {
 
 
 
-/* ... */
-
-
-/* ... */
-
 .section-title {
     text-decoration: underline;
 }
@@ -346,7 +359,7 @@ section {
 .project {
     display: inline-block;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -560,6 +573,7 @@ footer {
     line-height: 1.5; /* Set the line height */
     text-align: left; /* Align the text to the left */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the box */
+    margin-bottom: 30px;
 }
 
 .commit-info-box p {
