@@ -430,7 +430,7 @@ footer {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    width: 350px;
+    width: 420px;
     transition: 0.3s;
     position: relative;
     overflow: hidden;
@@ -443,6 +443,7 @@ footer {
 .course-title {
     color: #ffffff;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .course-description {
@@ -542,10 +543,23 @@ footer {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Set a maximum width for the course list */
+    max-width: 1500px; /* Set a maximum width for the course list */
     margin: auto; /* Center the course list */
 }
 
+
+
+.course-tag-green {
+    display: inline-block;
+    background-color: #16be2a; /* Light blue background */
+    color: #ffffff; /* White text */
+    padding: 4px 8px; /* Padding around the text */
+    border-radius: 3px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    margin-left: 0px; /* Space between the title and the tag */
+    margin-right: 6px;
+    margin-bottom: 5px;
+}
 
 .course-tag-blue {
     display: inline-block;
@@ -556,20 +570,20 @@ footer {
     font-weight: bold; /* Bold text */
     margin-left: 0px; /* Space between the title and the tag */
     margin-right: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
 .course-tag-red {
     display: inline-block;
-    background-color: #ff7f50; /* Light blue background */
+    background-color: #f94f4f; /* Light blue background */
     color: #ffffff; /* White text */
     padding: 4px 8px; /* Padding around the text */
     border-radius: 3px; /* Rounded corners */
     font-weight: bold; /* Bold text */
     margin-left: 0px; /* Space between the title and the tag */
     margin-right: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -692,12 +706,16 @@ footer {
     margin-right: 10px;
 }
 
+.mostly-complete::before {
+    background-color: #16be2a;
+}
+
 .partially-complete::before {
     background-color: #1694be;
 }
 
 .limited-none::before {
-    background-color: #ff7f50;
+    background-color: #f94f4f;
 }
 
 .status-text {
