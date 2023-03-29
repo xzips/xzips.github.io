@@ -455,7 +455,7 @@ footer {
     gap: 10px;
     width: 100%;
     padding: 20px;
-    background-color: rgba(30, 143, 255, 0.153);
+    background-color: rgba(9, 43, 77, 0.153);
     margin-top: 20px;
 }
 
@@ -511,6 +511,8 @@ footer {
     border-radius: 5px;
     margin: 5px;
     text-decoration: none;
+    /*box shadow*/
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 .pdf-button:hover {
@@ -545,7 +547,7 @@ footer {
 }
 
 
-.course-tag {
+.course-tag-blue {
     display: inline-block;
     background-color: #1694bec1; /* Light blue background */
     color: #ffffff; /* White text */
@@ -557,6 +559,18 @@ footer {
     margin-bottom: 10px;
 }
 
+
+.course-tag-red {
+    display: inline-block;
+    background-color: #ff7f50; /* Light blue background */
+    color: #ffffff; /* White text */
+    padding: 4px 8px; /* Padding around the text */
+    border-radius: 3px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    margin-left: 0px; /* Space between the title and the tag */
+    margin-right: 6px;
+    margin-bottom: 10px;
+}
 
 
 .commit-info-box {
@@ -595,4 +609,101 @@ footer {
     text-transform: uppercase; /* Convert the text to uppercase */
     text-decoration: underline; /* Add underline to the text */
     text-shadow: 1px 1px 2px #000000; /* Add shadow to make the text pop */
+}
+
+
+
+
+/*COURSE CARDS OVERVIEW*/
+.overview-section {
+    text-align: center;;
+    width: 800px; /* Set a fixed width for the box */
+    max-width: 90%; /* Ensure the box doesn't exceed 90% of its container's width */
+    margin: 0 auto; /* Center the box */
+    border: 1px solid #2048c1;
+    padding: 15px;
+    background-color: #00000029;
+    border-radius: 5px;
+    color: #ffffff; /* Set the text color to white */
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+    font-size: 14px; /* Set the font size */
+    line-height: 1.5; /* Set the line height */
+    text-align: left; /* Align the text to the left */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the box */
+    margin-bottom: 30px;
+    margin-top: 80px;
+    /*blur backgorund*/
+    
+    
+}
+
+
+
+
+.overview-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Arial, sans-serif;
+}
+
+.overview-description {
+    font-size: 18px; /* Increase font size */
+    margin-bottom: 20px;
+    color: #d9dde6; /* Slightly lighter color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+    font-weight: 500; /* Slightly bolder text */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.red-highlight {
+    color: #f52d2d; /* Slightly red color */
+    font-weight: bold; /* Bolder text */
+}
+
+
+.status-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 200px; /* Set a fixed width for better alignment */
+}
+
+.status-box::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.partially-complete::before {
+    background-color: #1694be;
+}
+
+.limited-none::before {
+    background-color: #ff7f50;
+}
+
+.status-text {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }

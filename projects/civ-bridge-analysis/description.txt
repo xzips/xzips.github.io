@@ -1,0 +1,24 @@
+Context:
+For my first year university course, Structures and Materials (CIV102),
+we were tasked with designing and building a beam bridge of length 1200mm using
+a limited amount of matboard (similar to cardboard), and glue. Given the imposed
+limitations, the optimal bridge configuration was not obvious.
+
+Summary:
+
+In order to assist my team in designing a near-optimal bridge, I built this
+graphical tool in pure C++ (with a graphics library) to implement everything
+I had learned this semester regarding the behaviour of structures. The tool
+features an interactive bridge cross section(the main design space) editor,
+with live calculations and feedback for bridge safety factor, and failure mode
+based on a 3D simulation of internal and external stresses on the structure.
+13(check) types of failure and internal stresses were included in the simulation.
+The simulation accurately predicted the failure load of the bridge when it was tested,
+to within ~14%
+
+
+
+
+
+
+
