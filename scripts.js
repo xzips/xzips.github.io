@@ -95,4 +95,87 @@ function ordinalSuffix(day) {
     .catch(error => {
       console.error('Error fetching commit data:', error);
     });
-  
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    function openModal(projectCard) {
+        const modal = document.querySelector(".project-modal");
+        const modalContent = modal.querySelector(".modal-content");
+        const projectTitle = projectCard.querySelector(".project-title").textContent;
+        modal.querySelector(".modal-title").textContent = projectTitle;
+      
+        // Get the original card position and size
+        const rect = projectCard.getBoundingClientRect();
+      
+        // Set initial modal position and size based on the card
+        modal.style.top = `${rect.top}px`;
+        modal.style.left = `${rect.left}px`;
+        modal.style.width = `${rect.width}px`;
+        modal.style.height = `${rect.height}px`;
+      
+        // Display the modal
+        modal.classList.add("animating");
+        modal.style.display = "flex";
+      
+        // Animate the modal to fill the screen
+        setTimeout(() => {
+          modal.style.top = "0";
+          modal.style.left = "0";
+          modal.style.width = "100%";
+          modal.style.height = "100%";
+        }, 100);
+      
+        // Animate the content to the center and make it visible
+        setTimeout(() => {
+          modalContent.style.position = "relative";
+          modalContent.style.opacity = "1";
+          modal.classList.add("active");
+          modal.classList.remove("animating");
+        }, 600);
+      }
+      
+      function closeModal(modal) {
+        const modalContent = modal.querySelector(".modal-content");
+      
+        // Hide the content
+        modalContent.style.opacity = "0";
+        modal.classList.remove("active");
+      
+        // Animate the modal back to the original position and size
+        setTimeout(() => {
+          modal.classList.add("animating");
+          const rect = modal.style;
+          modal.style.top = rect.top;
+          modal.style.left = rect.left;
+          modal.style.width = rect.width;
+          modal.style.height = rect.height;
+        }, 100);
+      
+        // Hide the modal
+        setTimeout(() => {
+          modal.style.display = "none";
+          modal.classList.remove("animating");
+          modalContent.style.position = "static";
+        }, 600);
+      }
+      
+
+
+
+
+
+
