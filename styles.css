@@ -496,7 +496,8 @@ footer {
 
 .pdf-category-title {
     color: #ffffff; /* Change the color to white */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
     text-decoration: underline; /* Add underline */
     text-shadow: 2px 2px 4px #000000; /* Add shadow */
     font-weight: bold; /* Make the font bold */
@@ -724,4 +725,49 @@ footer {
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.project-description-text {
+    margin-bottom: 2cm;
+    margin-top: 2cm;
+    margin-left: 2cm;
+    margin-right: 5cm;
+    /*font size*/
+    font-size: 22px;
+    line-height: 1.6;
+ }
+
+
+ .project-card {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-card-image {
+    flex: 1;
+    margin: 10px;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card-content {
+    flex: 2;
+    margin: 10px;
+}
+
+.project-card-skills {
+    flex: 1;
+    margin: 10px;
+}
+
+.project-card-skills ul {
+    list-style-type: disc;
 }
