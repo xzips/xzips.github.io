@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const courseCards = document.querySelectorAll(".course-card");
+
+    //".course-card class and .project-card class"
+    const courseCards = document.querySelectorAll(".course-card, .project-card");
+    
 
     courseCards.forEach((card) => {
         card.addEventListener("click", (event) => {
@@ -8,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 return; // Do not perform the closing action
             }
 
+            //console.log("clicked");
+
             if (card.classList.contains("expanded")) {
                 card.classList.remove("expanded");
                 // Add a small delay before showing other cards
                 setTimeout(() => {
                     courseCards.forEach((otherCard) => {
-                        otherCard.style.display = "block";
+                        otherCard.style.display = "flex";
                     });
                 }, 250);
             } else {

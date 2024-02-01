@@ -55,14 +55,32 @@
             <h2 class="section-title">Professional</h2>
             <div class="course-list">
 
-
-                <div class="course-card">
-                    <div class="course-card-header">
-                        <h2 class="course-title"><span class="course-tag-green">&nbsp</span> Freelance Python Data Analysis </h2>
-                        <p class="course-description">Completed 2 freelance contract projects involving Python web scraping, data analysis, presentation, and formatting final results in excel format</p>
+                <!--  -->
+                <div class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/logos/python.png" alt="Project Image">
                     </div>
 
-                    <div class="course-card-content">
+                    <div class="project-card-header">
+                        <h2 class="project-title"><span class="course-tag-green">&nbsp</span> Freelance Python Data Analysis </h2>
+                        <p class="project-description">Completed 2 freelance contract projects involving Python web scraping, data analysis, presentation, and formatting final results in excel format</p>
+                    </div>
+
+                    
+
+                    <div class="project-card-skills">
+                        <h3 class="project-card-skills-title">Skills</h3>
+                        <ul>
+                            <li>Python Scripting</li>
+                            <li>Professional Communication</li>
+                            <li>Data Analysis</li>
+                            <li>Excel Data Presentation</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="project-card-content">
                         <div class="pdf-category">
 
                             <h3 class="pdf-category-title">Motivation</h3>
@@ -197,16 +215,174 @@
             </div>
         </section>
 
-        <!-- Year 2 Section -->
+      
         <section class="course-section">
-            <h2 class="section-title">Year 2</h2>
+            <h2 class="section-title">Academic</h2>
             <div class="course-list">
-                <!-- Course cards for Year 2 -->
-                <!-- Add course cards for Year 2 here -->
+
+                <div class="project-card">
+                    <div class="project-card-image">
+                        <img src="images/logos/python.png" alt="Project Image">
+                    </div>
+
+                    <div class="project-card-header">
+                        <h2 class="project-title"><span class="course-tag-green">&nbsp</span> Freelance Python Data Analysis </h2>
+                        <p class="project-description">Completed 2 freelance contract projects involving Python web scraping, data analysis, presentation, and formatting final results in excel format</p>
+                    </div>
+
+                    
+
+                    <div class="project-card-skills">
+                        <h3 class="project-card-skills-title">Skills</h3>
+                        <ul>
+                            <li>Python Scripting</li>
+                            <li>Professional Communication</li>
+                            <li>Data Analysis</li>
+                            <li>Excel Data Presentation</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="project-card-content">
+                        <div class="pdf-category">
+
+                            <h3 class="pdf-category-title">Motivation</h3>
+
+                            <div class="project-description-text">
+                            
+                            I was contracted by a client online, through a connection made in person.
+
+
+                            </div>
+
+                            <h3 class="pdf-category-title">Objectives - Subproject 1</h3>
+
+
+                            <div class="project-description-text">
+                            
+                            
+                          
+
+                            <ul>
+                                <li>Scrape a public database website for all available entries under a certain catagory, and save key numerical identifiers (website itself did not have desired sorting/searching features, and there was a large number of entries in no particular order)</li>
+                                <li>Export and format extracted data along with original entry link into excel for the client to sort each entry by the numerical identifiers they desired</li>
+                                <li>Present results to client and perform any necesessary revisions</li>
+                            
+                            </ul> 
+                              
+                            
+                            </div>
+
+
+                            <h3 class="pdf-category-title">Methods & Process - Subproject 1</h3>
+
+                            <div class="project-description-text">
+                            
+                    
+    
+                                <ul>
+                                    <li> Python, along with the "requests" library was used to scrape the data, "regex" was used to extract the useful variables from each entry</li>
+                                    <li> The "pandas" data storage and formatting library was used to export the results into excel format for presentation to the client </li>
+
+
+                                </ul> 
+                                  
+                                
+                                </div>
+
+
+                            <h3 class="pdf-category-title">Outcomes - Subproject 1</h3>
+
+                            <div class="project-description-text">
+                            
+                    
+    
+                                <ul>
+                                    Client was satisfied with the results after a minor revision to the generated data format, and the project was completed within the time frame and budget.</li>
+                                </ul> 
+                                  
+                                
+                                </div>
+
+
+
+                            <h3 class="pdf-category-title">Objectives - Subproject 2</h3>
+
+
+                            <div class="project-description-text">
+                            
+                            
+                            Note: Some details are omitted for privacy reasons.<br><br>
+
+
+                            <ul>
+                                <li>Scrape a different public database website by a list of account ID's and save additional information based on certain paramters from the account </li>
+                                <li>Using this reduced, filtered list of account ID's, more scraping was required to determine the ones that were connected to others in the list</li>
+                                <li>Once the reduced final account list was obtained, it was required to determine a concensus between recent activity, determining A: the proportion of accounts 
+                                    all performing the same action, and B the action itself </li>
+                                <li>Finally, the results were to be formatted in an excel file and presented to the client</li>
+
+                            </ul> 
+                              
+                            
+                            </div>
+
+                            <h3 class="pdf-category-title">Methods & Process - Subproject 2</h3>
+
+                            <div class="project-description-text">
+                            
+                    
+    
+                                <ul>
+                                    <li> Python was used for all programming aspects, and the "requests library" we used at first </li>
+                                    
+                                    <li> However, for the second phase of determing account connections, significantly more requests were needed. In order to bypass website rate limits, the "cfscrape" library was used  </li>
+
+                                    <li> In order to further improve data collection speed, the code was compartmentilized and distributed to multiple cores using the "multiprocessing" python module</li>
+
+                                    <li> Once all the connection data was gathered, various graph analysis algorithms were used from the "networkx" library to quantify the degree of connection between account IDs</li>
+
+                                    <li> Using the new list of account IDs, the they were rescraped for the additional data necessary to determine action consensus</li>
+
+                                    <li> Finally, the "pandas" library was used to export the results into an excel spreadsheet, and some manual formatting changes were made before presentation</li>
+
+                                </ul> 
+                                  
+                                
+                                </div>
+
+                            <h3 class="pdf-category-title">Outcomes - Subproject 2</h3>
+
+                            <div class="project-description-text">
+                            
+                    
+    
+                                <ul>
+                                    Client was satisfied with the results, and the project was completed within the time frame and budget. Mention of potentioal future work was made, but nothing has come of it yet</li>
+                                </ul> 
+                                  
+                                
+                                </div>
+                            
+                            
+                        </div>
+                   
+                    </div>
+                </div>
+
+
+
+
+
+        
             </div>
         </section>
 
-        <!-- Add more sections for other years -->
+
+
+
+
     </main>
 
     <footer>

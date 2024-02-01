@@ -740,22 +740,120 @@ footer {
  }
 
 
- .project-card {
-    display: flex;
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+
+
+/*
+
+.course-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 420px;
+    transition: 0.3s;
+    position: relative;
     overflow: hidden;
 }
 
+.course-card-header {
+    cursor: pointer;
+}
+
+.course-title {
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    color: #aaaaaa;
+}
+
+*/
+
+
+ .project-card {
+    display: flex;
+
+    align-items: center; /* This will vertically center the children in the container */
+    gap: 20px; 
+
+    border: 1px solid #ccc;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1000px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+
+.project-card.expanded {
+    width: 100%;
+    z-index: 10;
+}
+
+.project-card.expanded .project-card-content {
+    display: flex;
+    align-items: center; /* This will vertically center the children in the container */
+    gap: 20px; 
+
+}
+
+.project-card.expanded::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: -1;
+
+
+}
+
+
+
+
+.project-card-content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(9, 43, 77, 0.153);
+    margin-top: 20px;
+}
+
+
+
+.project-title {
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #aaaaaa;
+    
+}
+
+
+
+
 .project-card-image {
-    flex: 1;
     margin: 10px;
+    flex-shrink: 0;
+
 }
 
 .project-card-image img {
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 100px;
 }
 
 .project-card-content {
@@ -763,11 +861,27 @@ footer {
     margin: 10px;
 }
 
+
+.project-card-skills-title {
+    width:300px;
+    /*gray*/
+    color: #ffffff;
+
+    /*font size half that of the title*/
+    font-size: 1rem;
+
+}
+
 .project-card-skills {
     flex: 1;
     margin: 10px;
+    width:300px;
+    color: #aaaaaa;
+
 }
 
 .project-card-skills ul {
     list-style-type: disc;
+    width:300px;
+    margin: 10px;
 }
