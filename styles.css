@@ -852,8 +852,8 @@ footer {
 }
 
 .project-card-image img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: auto;
 }
 
 .project-card-content {
@@ -884,4 +884,15 @@ footer {
     list-style-type: disc;
     width:300px;
     margin: 10px;
+}
+
+
+
+.project-image-40 {
+    width: 42%;
+    height: auto;
+    transition: 0.3s;
+    border: 3px solid #1f7bc5; /* Add this line */
+    flex:auto;
+    margin: 20px
 }
