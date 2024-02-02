@@ -31,7 +31,7 @@ body::before {
         linear-gradient(90deg, rgba(30, 144, 255, 0.1) 2px, transparent 2px);
     background-size: 40px 40px;
     opacity: 1;
-    min-height: 150vh;
+    min-height: 300vh;
 }
 
   
@@ -501,7 +501,7 @@ footer {
     text-decoration: underline; /* Add underline */
     text-shadow: 2px 2px 4px #000000; /* Add shadow */
     font-weight: bold; /* Make the font bold */
-    font-size: 18px; /* Increase the font size */
+    font-size: 24px; /* Increase the font size */
     font-family: Arial, sans-serif; /* Change the font */
 }
 
@@ -788,6 +788,11 @@ footer {
 
 }
 
+/*when you hover project card it should change color, but only in not expanded mode*/
+.project-card:not(.expanded):hover {
+    background-color: #2b2b2b;
+    border: 1px solid #1f7bc5;
+}
 
 
 
@@ -895,4 +900,44 @@ footer {
     border: 3px solid #1f7bc5; /* Add this line */
     flex:auto;
     margin: 20px
+}
+
+.project-image-80 {
+    width: 86%;
+    height: auto;
+    transition: 0.3s;
+    border: 3px solid #1f7bc5; /* Add this line */
+    flex:auto;
+    margin: 20px
+
+
+
+
+}
+
+
+/*centered box to hold contact info*/
+.contacts-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/*"contact-link" class for the contact links, should be nice light blue underlined*/
+.contact-link {
+    color: #1e90ff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
