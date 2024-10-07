@@ -1,149 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
-    <link rel="icon" type="image/png" href="favicon.png">
-
-</head>
+  <head>
+    <title>Aspen Erlandsson</title>
+	<link rel="icon" type="image/png" href="favicon.png">
 
 
-<body>
-    <header>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="university-notes.html" class="nav-link">University Notes</a></li>
-                <li><a href="Resume - Aspen Erlandsson.pdf" class="nav-link" target="_blank">Resume</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+	<head>
+		<meta property="og:title" content="Aspen Erlandsson" />
+		<meta property="og:description" content="Aerospace Engineering student at UofT, specializing in UAV design, avionics, CAD, PCB, and simulation." />
+		<meta property="og:image" content="https://yourdomain.com/images/me.jpg" />
+		<meta property="og:url" content="https://TheAspen.ca" />
+		<meta property="og:type" content="website" />
+	  </head>
+	  
 
-    <main>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
+    <link rel="stylesheet" href="css/aos.css">
 
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Aspen</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-
-
-
-<div class="main-content">
-
-
-
-
-<section id="home">
-    <div class="main-content">
-
-        <div class="intro-left">
-            <div class="profile-info">
-                <img src="me.jpg" alt="Your Name" class="profile-picture">
-                <div class="name">
-                    <h1>Aspen <br>Erlandsson</h1>
-                  
-                </div>
-            </div>
-
-            <div class="right-section">
-                <div class="github-contributions">
-                    <h2 class ="section-title">Historical Github Activity</h2>
-                    <img src="https://ghchart.rshah.org/1e90ff/xzips" alt="GitHub Contributions" class="github-chart">
-                </div>
-
-
-                <!-- Create a container where the commit information will be displayed -->
-                <div id="commit-info-container"></div>
-
-
-                
-                <div class="recent-projects">
-                    <h2 class="section-title"></h2>
-                    
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+				<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+				<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+				<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+				<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
 
 
 
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	      <div class="slider-item ">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg1_new.png);">
+	          		<div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Aspen Erlandsson</span></h1>
+			            <h2 class="mb-4">Aerospace Engineering Student <br> University of Toronto</h2>
+			            <p><a href="#projects-section" class="btn btn-primary py-3 px-4">See My Projects</a> <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Contact</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
 
-                    <!-- Add more projects by duplicating the project div -->
-                </div>
+	      <div class="slider-item">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg1_new.png);">
+	          		<div class="overlay"></div>
+	          	</div>;l ;llllll
+		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm an <span>Aerospace Engineering Student</span> studying in Toronto</h1>
+			            <p><a href="#projects-section" class="btn btn-primary py-3 px-4">See My Projects</a> <a href="#contact-section" class="btn btn-white btn-outline-white py-3 px-4">Contact</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
 
-                
-            </div>
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    
+    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p> As a third-year Engineering Science student specialzing in Aerospace Engineering at the University of Toronto, I am passionate about mathematics, science, aviation, and space exploration, and I am committed to applying my skills to practical engineering projects.<br><br>
 
-            <div class = organizations>
+						I have designed and developed a fully custom fixed-wing UAV, integrating skills in aerodynamics, control systems, and electronics.
+						As the rocket avionics subsystem lead in the University of Toronto Aerospace Team (UTAT), I continue to advance my expertise in CAD, PCB design, and simulation as part of the avionics subsystem.<br><br>
+						
+						Alongside my technical pursuits, I maintain a balanced lifestyle, regularly working out at the gym and practicing photography during my free time. </p>
+				</div>
+		        </div>
+	       
+                <!-- <p><a href="#" class="btn btn-primary py-3 px-3">Download Full Resume</a></p>.-->
+              
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+	
 
-                <div class="organization">
-                    <img src="uoft-logo.png" alt="University of Toronto Logo" class="org-logo">
-                    <div class="org-text">
-                        <p class="org-name">University of Toronto</p>
-                        <span class="org-tag">Engineering Science</span>
-                    </div>
-                </div>
 
-   
 
-                <!-- Add more organizations here -->
-            </div>
-            
-            <div class="intro-summary-container">
-                <h2 class="summary-title">Personal Summary</h2>
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+		  <div class="col-md-10 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Experience</h1>
+			<h2 class="mb-4">Experience</h2>
+			<p></p>
+		  </div>
+		</div>
+			<div class="row">
+				<div class="col-md-6">
 
-                <p class="intro-summary">
-                    As a second-year Engineering Science student at the University of Toronto, I am driven by my passion for mathematics, science, technology, and space exploration, I am committed to achieving my goals.
-                </p>
+					<div class="resume-wrap ftco-animate d-flex align-items-start">
+			
+						<div>
+							<span class="date d-flex align-items-center">
+								<img src="images/UofT.JPG" alt="University of Toronto Logo" class="img-fluid mr-2" style="width: 100px; height: auto; border-radius: 20%;">
+								2022-2027 (expected)
+							</span>
+							<h2>Bachelor in Aerospace Engineering</h2>
+							<span class="position">University of Toronto</span>
+							<p class="mt-4">Currently in year 3 of the undergraduate Engineering Science program at the University of Toronto, I am majoring in Aerospace Engineering, and will be completing a 1-year full-time Co-op internship between 2025 and 2026.</p>
+						</div>
+					</div>
+				
 
-                <p class="intro-summary">
-                    With a solid background in C++ I have developed a deep understanding of low-level computation, computer architecture, instruction sets, and assembly. I have extensive experience in Python for scripting and data analysis for school and personal projects. My interest in hobby robotics has complemented my academic journey and expanded my skillset.
-                </p>
-            
-                <p class="intro-summary">
-                    Additionally, I share my coding knowledge through my <a href="https://www.youtube.com/channel/UCOPIcv1hbmiIJm1EZl9YAlA" class="youtube-link" target="_blank">YouTube channel</a>, offering C++ tutorials to help others learn. Outside of academics, I maintain a balanced lifestyle regularly working out at the gym, and doing photography when I have time.
-                </p>
-            </div>
 
-            
-          
+					<div class="resume-wrap ftco-animate d-flex align-items-start">
 
+						<div>
+							<span class="date d-flex align-items-center">
+								<img src="images/UTAT.png" alt="University of Toronto Logo" class="img-fluid mr-2" style="width: 100px; height: auto; border-radius: 20%;"> 
+								2024-Present
+							</span>
+							<h2>Rocket Avionics Lead - Student Design Team</h2>
+							<span class="position">University of Toronto Aerospace Team</span>
+							<p class="mt-4">Starting as a member, I was promoted to avionics subsystem lead, being directly responsible for the work of over 20 student engineers on my subteam alone, and working to launch a fully liquid powered rocket by August 2025 to set new records.</p>
+						</div>
+					</div>
+	
+					</div>
+	
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate d-flex align-items-start">
+				
+							<div>
+								<span class="date d-flex align-items-center">
+									<img src="images/VIDO.jpg" alt="University of Toronto Logo" class="img-fluid mr-2" style="width: 100px; height: auto; border-radius: 20%;"> 
+									2024-Present
+								</span>
+								<h2>Quantum Computing Researcher</h2>
+								<span class="position">Vaccine and Infectious Disease Organization (VIDO) at the University of Saskatchewan</span>
+								<p class="mt-4">Working closely with a team of researchers specializing in Biomolecular Physics and Immunodynamics to apply Quantum Computing for novel disease treatment and prevention.</p>
+							</div>
+						</div>
+						
+
+
+						<div class="resume-wrap ftco-animate d-flex align-items-start">
+							<div>
+								<span class="date d-flex align-items-center">
+									<img src="images/YouTubeLogo.JPG" alt="University of Toronto Logo" class="img-fluid mr-2" style="width: 100px; height: auto; border-radius: 20%;"> 
+									2021-2023
+								</span>
+								<h2>Video Educator - Technical Subjects</h2>
+								<span class="position">Self Directed, YouTube</span>
+								<p class="mt-4">Created videos on technical subjects across 2 YouTube channels covering topics including programming, video editing, and 3D animation. Gaining a total of 1.3 million views across all videos.</p>
+							</div>
+						</div>
+			
+				</div>
+
+
+				
+			</div>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="Resume - Aspen Erlandsson.pdf" class="btn btn-primary py-4 px-5" target="_blank">Download Full Resume</a></p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	
+		<section class="ftco-section ftco-project" id="projects-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+			  <div class="col-md-12 heading-section text-center ftco-animate">
+				  <h1 class="big big-2">Projects</h1>
+				<h2 class="mb-4">My Projects</h2>
+				<p>A few top projects selected from a pool of many.</p>
+			  </div>
+			</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/PlaneProjectThumbnail.JPG); height: 500px;">
+							<div class="overlay"></div>
+							<div class="text text-center p-4">
+								<h3><a href="uav.html">3D Printed Fixed-Wing UAV</a></h3>
+								<span>CAD, CFD, Aerodynamics, PCB Design, System Integration</span>
+							</div>
+						</div>
+					  </div>
+					  <div class="col-md-6">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/EulerFluidSimThumb1.jpg); height: 500px;">
+							<div class="overlay"></div>
+							<div class="text text-center p-4">
+								<h3><a href="fluids.html">Eulerian Fluid Simulation in C++</a></h3>
+								<span>C++ Programming, Physics, Fluid Mechanics</span>
+							</div>
+						</div>
+					  </div>
+	
+					<div class="col-md-6">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/TargeterPic3.JPG); height: 500px;">
+							<div class="overlay"></div>
+							<div class="text text-center p-4">
+								<h3><a href="pointer.html">Highly Accurate Star Pointer</a></h3>
+								<span>Mechatronics, PCB Design, Astronomy, Sensor Fusion</span>
+							</div>
+						</div>
+	
+					
+					</div>
+
+
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/cat_trap_render.jpg); height: 500px;">
+									<div class="overlay"></div>
+									<div class="text text-center p-4">
+										<h3><a href="firmware.html">Hyperspectral Imaging Satellite</a></h3>
+										<span>STM32, Embedded Systems, Teamwork</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	
+
+
+		
+
+
+
+
+  
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact Me</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>I usually reply within a day.</p>
+          </div>
         </div>
 
-                
-     
+		<div class="row d-flex justify-content-center contact-info mb-5">
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			  <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+				  <span class="icon-paper-plane"></span>
+				</div>
+				<h3 class="mb-4">Email Address</h3>
+				<p><a style="margin-left: -40px;"href="mailto:aspen.erlandsson@mail.utoronto.ca" class="email-link">aspen.erlandsson@mail.utoronto.ca</a></p>
+			  </div>
+			</div>
+		  </div>
+		  
+		  
+
+       
+      </div>
+    </section>
+<footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Navigation</h2>
+              <ul class="list-unstyled">
 
 
-        
+                <li><a href="index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="index.html#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a></li>
+                <li><a href="index.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
 
-    </div>
-    
-</section>
-      
 
-        </section>
-            <!-- About content goes here -->
-        </section>
+              </ul>
+            </div>
+          </div>
+       
+          
 
-        <section id="projects">
-            <!-- Projects content goes here -->
-        </section>
 
-        <section id="university-notes">
-            <!-- University Notes content goes here -->
-        </section>
-
-        <section id="contact">
-            <!-- Contact content goes here -->
-        </section>
-    </main>
-
-    <footer>
-        <!-- Footer content goes here -->
+          </div>
+        </div>
+      </div>
     </footer>
+    
+  
 
-</div>
 
-</body>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
