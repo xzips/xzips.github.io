@@ -75,11 +75,14 @@
             <h3 >Introduction </h3>
             <p>
               <p>
-                As an Aerospace Engineering student, I’ve built a solid foundation in fluid mechanics and vector calculus through several courses. Now I’m applying the principles I've learned to build an Eulerian fluid simulator. The governing equations of fluid flow, known as the Navier-Stokes equations, provide a detailed description of the motion of fluid substances.
+                As an Aerospace Engineering student, I've built a solid foundation in fluid mechanics and vector calculus through several courses.
+                In this project I applied the principles I've learned to build an Eulerian fluid simulator.
+                The governing equations of fluid flow, known as the Navier-Stokes equations, provide a detailed description of the motion of fluid substances.
               </p>
                 
                 <p>
-                These equations account for the conservation of momentum, mass, and energy in a fluid, which is the basis for modern computational fluid dynamics (CFD) analysis. This simulator is a direct implementation of those principles, allowing me to explore interactively how fluids behave under different conditions, and gain a better intuition for the equations themselves.
+                These equations account for the conservation of momentum, mass, and energy in a fluid, which is the basis for modern computational fluid dynamics (CFD) analysis.
+                This simulator is a direct implementation of those principles, allowing me to explore interactively how fluids behave under different conditions, and gain a better intuition for the equations themselves.
                 </p>
                 
                 <h3 >Demo </h3>
@@ -99,12 +102,13 @@
                 </video>
 
 
-                The simulation is also highly optimized, running in realtime(~60fps average) on my 12-core 3.8GHz Ryzen system with a grid size of 269x152, and using 100 Gauss-Seidel iterations per frame. The simulation is also cross-platform, runnining on Windows, MacOS, Linux, etc.
+                The simulation is also highly optimized, running in realtime(~60fps average) on my 12-core 3.8GHz Ryzen system with a grid size of 269x152, and using 100 Gauss-Seidel iterations per frame.
+                The simulation is also cross-platform, running on Windows, MacOS, Linux, etc.
                 However, note that I only provide a pre-compiled executable for Windows on the GitHub since that's the most common platform.
                 
                 <h3 >Math </h3>
                 <p>
-                Without too deep into the math, I'd like to give you an idea of the Navier-Stokes equations:
+                Without getting too deep into the math, I'd like to give you an idea of the Navier-Stokes equations:
                 </p>
                 
                 <p>
@@ -121,12 +125,12 @@
                 </p>
                 
                 <ul>
-                    <li><b>Inviscid Flow:</b> The Euler equations assume that the fluid has no viscosity. This means that internal friction between fluid layers (which arises from viscosity) is neglected. As a result, the Euler equations do not account for shear stresses within the fluid.</li>
+                    <li><b>Inviscid Flow:</b> The Euler equations assume that the fluid has no viscosity. This means that internal friction between fluid layers (which arises from viscosity) is neglected.As a result, the Euler equations do not account for shear stresses within the fluid.</li>
                     <li><b>No Heat Conduction:</b> The Euler equations also assume there is no heat conduction within the fluid, i.e. no energy transfer due to temperature gradients.</li>
                 </ul>
                 
                 <p>
-                Putting it all together, we arrive at the Euler equations:
+                Putting it all together, we obtain the Euler equations:
                 </p>
                 
                 <p>
@@ -140,7 +144,7 @@
                 
                 <h3 >Implementation </h3>
                 <p>
-                While the Euler equations are nice to look at, they don’t exactly help us compute the solution, so to do that we will discretize them into a simulation loop following this strategy:
+                While the Euler equations are nice to look at, we can't use them directly to compute the solution, so to do that we will discretize them into a simulation loop following this strategy:
                 </p>
                 
                 <ul>
@@ -160,7 +164,7 @@
                 
                 <ul>
                     <li>Writing everything in C++ and compiling with maximum auto-optimization offers good baseline performance.</li>
-                    <li>OpenMP is used for multicore processing of all simulation aspects, greatly accelerating solve time. Benchmarks showed that the difference between OpenMP on/off on my 12-core Ryzen 3.8GHz system was on the order of ~10x performance gain (451ms solve time to 44.5ms solve time).</li>
+                    <li>OpenMP is used for multi-core processing of all simulation aspects, greatly accelerating solve time. Benchmarks showed that the difference between OpenMP on/off on my 12-core Ryzen 3.8GHz system was on the order of ~10x performance gain (451ms solve time to 44.5ms solve time).</li>
                     <li>Using a slight variation on the traditional method, the Gauss-Seidel Red-Black approach to solving the incompressibility condition allows for parallelizing an otherwise purely sequential problem, which contributed to the 10x performance gain quoted above.</li>
                     <li>Rendering functions operate on raw pixel and data arrays as much as possible, and only use expensive draw and display buffer operations at the very end of rendering where it's necessary. This improved frame render time from 25ms to 0.36ms (70x improvement) compared to the original function.</li>
                 </ul>
@@ -183,7 +187,9 @@
            
                 
                     <li>
-                        <b>Flow Stability:</b> Despite the sharp changes in flow direction (velocity gradient) and the presence of obstacles, the simulation remains stable under the test conditions, indicating a well-functioning solver. Stability is maintained even in regions with high velocity gradients due to boundaries, as seen below.
+                        <b>Flow Stability:</b> Despite the sharp changes in flow direction (velocity gradient) and the presence of obstacles, the simulation remains stable under the test conditions, indicating a well-functioning solver.
+                        Stability is maintained even in regions with high velocity gradients due to boundaries, as seen below where the velocity
+                        source and airfoil boundary are placed in close proximity.
                         <br>
                         <video width="100%" max-width="600px" controls style="margin-top: 10px;">
                           <source src="videos/StabilityDemo1.mp4" type="video/mp4">

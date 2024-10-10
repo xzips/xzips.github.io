@@ -72,7 +72,7 @@
  
             <h2 >Introduction </h2>
             At the start of my first year of university, I joined the University of Toronto Aerospace Team (UTAT) in the Space Systems division.
-            As someone with a lot of prior programming experience, I decided to join the firmware team for the satelltie. The satellite 
+            As someone with a lot of prior programming experience, I decided to join the firmware team for the satellite. The satellite 
             were developed was a hyperspectral imaging satellite, which captures images in many different wavelengths to map crop residue and
             greenhouse gas emissions of farmland from space. The project is called FINCH, and will be launching on a SpaceX rocket in 2025.
             Working on the firmware, we followed a strict FSM (Finite State Machine) design pattern, and used FreeRTOS as the operating system.
@@ -83,10 +83,10 @@
             
             <h2 >Learning STM32 & FreeRTOS </h2>
             STM32 is like the industry version of the Arduino, but with more features and a lot more complexity. Upon joining the team, I had
-            to complete a month long training program to learn how to use the STM32CubeIDE, for firmware development, which I had no prior experience.
-            I succesfully completed the training, and was able to start working on the project (the video at the top of this page) is 
+            to complete a month-long training program to learn how to use the STM32CubeIDE, for firmware development, which I had no prior experience with.
+            I successfully completed the training, and was able to start working on the project (the video at the top of this page) is 
             part of my final demo project for the training programming. Throughout my approximate 1 year on the team,
-            I worked with 2 other members primarily, as well as with the leads of other subsystems to make three notable contributiosn to the project, 
+            I worked with 2 other members primarily, as well as with the leads of other subsystems to make three notable contributions to the project, 
             as will be discussed below. I should also note, that all code for the STM32 was written in C, and built on top of the FreeRTOS operating system.
             
             <img src="images/STM32_FreeRTOS.jpg" alt="Satellite FSM" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
@@ -109,7 +109,7 @@
             
             <h2> Reliability-Critical Battery Management System Firmware </h2>
             My next significant contribution was writing most of the core firmware for the battery management system (BMS) of the satellite. The BMS is
-            important in regulating power flow to the satellite, and charging from the solar panels. Additionally, realtime monitoring of each battery
+            important in regulating power flow to the satellite, and charging from the solar panels. Additionally, real-time monitoring of each battery
             cell voltage and temperature is critical to prevent fires or explosions under unexpected conditions. Finally, the BMS chip we were using did not
             have an existing library, so myself and another team-member had to scour the datasheet and write our own library from scratch to interface with
             the chip. The code was written in C, and used FreeRTOS to manage the tasks. The code was also written to be as modular as possible, so that
@@ -123,7 +123,7 @@
             <h2 > SFSF & FreeRTOS Integration </h2>
             
             Due to how the satellite architecture was planned, we had opted to use an existing library for spaceflight control operations, namely
-            <b>SmallSat Flight Software Framework (SFSF)</b>. This is an advanced piece of software designed to handle low-level oeprations of
+            <b>SmallSat Flight Software Framework (SFSF)</b>. This is an advanced piece of software designed to handle low-level operations of
             CubeSat satellites, such as power management, communication, and data storage. The library was written in C, however, at the time it was
             not directly compatible with FreeRTOS. Myself and 2 other team members were tasked with integrating the two libraries, so that we could
             use them together in the satellite. This was a very challenging task, as the two libraries were not designed to work together, and we had

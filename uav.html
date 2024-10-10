@@ -78,11 +78,12 @@
             <h2 >Introduction </h2>
             <p>
               <p>
-                As an Aerospace Engineering student, I have a passion for aviation and space exploration. Of the two passions, aviation is the more accessible, and I have always wanted to design and build my own aircraft. This project was an opportunity to do just that, and I decided to design and build a fixed-wing UAV from scratch.
+                As an Aerospace Engineering student, I have a passion for aviation and space exploration. Of the two passions, aviation is the more accessible, and I have always wanted to design and build my own aircraft.
+                This project was an opportunity to do just that, and I decided to design and build a fixed-wing UAV from scratch.
               </p>
 
               <p>
-                In addition to a custom-designed airframe (based on CFD tests) I wanted to challange myself by developing a completely custom digital communication protocol controlled from any Windows PC.
+                In addition to a custom-designed airframe (based on CFD simulations) I wanted to challenge myself by developing a completely custom digital communication protocol controlled from any Windows PC.
                 Finally, I wanted the UAV to be relatively large, with a wingspan of approx. 1.1m, and stream telemetry data back to the ground station in real-time.
               </p>
 
@@ -123,19 +124,19 @@
                 <h2> Avionics Hardware Design Process </h2>
                 <h4>Electronics Test Rig and Specs</h4>
                 <p>
-                  Research is the first step in any project, and after researching the avilable options for RF modules,
+                  Research is the first step in any project, and after researching the available options for RF modules,
                   I decided at first to use the nRF24L01+ modules for their low cost and high data rate. The modules
                   are rated for a range of 1km+ with a data rate of 2Mbps, which was more than enough for my application.
                   For the servo controller, I went with the tried and true PCA9685, which is a 16-channel servo controller.
                   In order to record orientation data, I used a MPU6050 6-axis gyroscope and accelerometer. For the main
-                  flight controller, I used a Teensy 4.0, which is a powerful microcontroller with a 600MHz ARM Cortex-M7.
+                  flight controller, I used a Teensy 4.0, which is a powerful micro-controller with a 600MHz ARM Cortex-M7.
                   Admittedly, this was overkill for the application, but I wanted to limit any potential bottlenecks in the
                   control system. For propulsion, I used a 40mm EDF (electronic ducted fan) powered by a brushless DC motor.
                   The EDF and speed controller were rated for 500W peak power, with 500g of thrust, which was more than enough
                   but I still validated the performance later on. Note that for the computer to NRF24 connection I
-                  used an unofficial varient of the Raspberry Pi Pico which offered some extra features compared
-                  to the offical varient (specifically, USB-C). Pictured below is the first iteration of the avionics test rig in the center,
-                  and the Pico transciever setup on a breadboard on the right.
+                  used an unofficial variant of the Raspberry Pi Pico which offered some extra features compared
+                  to the official variant (specifically, USB-C). Pictured below is the first iteration of the avionics test rig in the center,
+                  and the Pico transceiver setup on a breadboard on the right.
                 </p>
                   <img src="images/UAVTestRig1.PNG" alt="Avionics Test Rig Image" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
                   
@@ -148,7 +149,7 @@
                     Once this test rig was complete, I spent considerable time designing and programming the
                     PC control software, which you can view on GitHub (along with all other code), and I go more
                     into depth in the software section, but at a high level it was a simple GUI written in C++
-                    that interfaced with the Pico over serial USB to send and recieve data.
+                    that interfaced with the Pico over serial USB to send and receive data.
                   
                   </p>
                   
@@ -166,8 +167,8 @@
                     The test-rig completed above showed excellent performance characteristics for control and telemetry speed,
                     but I was having some issues with range. After researching more on the NRF24 modules, it turns out
                     that they are very sensitive to poor power supply quality (including wiring), so I figured the
-                    best way to eliminate any issues casued by my (cheap) power setup was to make a custom PCB with
-                    components from reputable manufacterers and suppliers. I used 3.3v and 5.0v voltage regulators 
+                    best way to eliminate any issues caused by my (cheap) power setup was to make a custom PCB with
+                    components from reputable manufacturers and suppliers. I used 3.3v and 5.0v voltage regulators 
                     from the reputable Infineon Technologies, ordered directly from DigiKey. I also used appropriate
                     decoupling capacitors and followed the datasheets for my power components to the letter.
                     Pictured below is the resulting PCB, which I designed in Altium Designer and ordered from PCBWay.
@@ -179,7 +180,7 @@
                   <img src="images/UAVPCB_1.PNG" alt="Custom PCB" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
                   
                   <p>
-                    I also created a temporary proto-board for the Pico transciever that connects to my PC, and 3D Printed
+                    I also created a temporary proto-board for the Pico transceiver that connects to my PC, and 3D Printed
                     a case for it. This was a temporary but effective solution for the time being. It is pictured in the image below
                     alongside the powered custom PCB from the other image above.
                     
@@ -192,33 +193,33 @@
                   <p>
                     
                     Feeling quite pleased with my work so far, I wanted to verify the power supply performance during 
-                    transmitting and recieving conditions. I used my new and shiney Siglent SDS1104X-E oscilloscope to
+                    transmitting and receiving conditions. I used my new and shiny Siglent SDS1104X-E oscilloscope to
                     probe the voltage stability during operation. I was able to verify that the
-                    voltage ripple had a peak-peak value of ~4mV during transmission, which is well within the manufacterers
+                    voltage ripple had a peak-peak value of ~4mV during transmission, which is well within the manufacturers
                     specified limit of 20mV.
                   </p>
                   
                   <h4>Abysmal Performance</h4>
                   <p>
-                    However, upon taking my prototype outside for a range test, I was very dissapointed to find that
+                    However, upon taking my prototype outside for a range test, I was very disappointed to find that
                     the reliable communication range was only about 20m, and the connection refused to work at allowing
                     past 30m. After some more research, the poor performance could be caused by a number of reasons
-                    including interference (local WiFi), poor antenna quality, poor power supply quality, and inadequete shielding.
-                    Seeing as I had already eliminted the last two options, and I didn't have a good way to test or improve
+                    including interference (local WiFi), poor antenna quality, poor power supply quality, and inadequate shielding.
+                    Seeing as I had already eliminated the last two options, and I didn't have a good way to test or improve
                     the conditions of the first (I was already using a 2.4GHz rated antenna provided with the modules).
                   </p>
 
                   <h4>Switching Communication Modules: LoRa</h4>
                   
                   <p>
-                    With the test data to show that the nRF24L01 moduels were inadequete in range, but overkill in data rate,
+                    With the test data to show that the nRF24L01 modules were inadequate in range, but overkill in data rate,
                     I decided to research alternatives that compromise datarate in favor of range. I settled on the LoRa
                     class of modules, which are designed for long-range, relatively low data rate applications. I ordered a set of 4
                     Ra-02 LoRa modules operating on the 433MHz band. I held off on ordering a new PCB until I could verify at least
                     some baseline performance even with a questionably wired and powered breadboard setup. My test setup is pictured below. Note the 4 LoRa modules total,
-                    they operate on slightly different frequencies to avoid interference, with pairs handling the transmit and recieve respectviely,
-                    this offers higher datarate and lower overhead compared to a single module setup switching between transmit and recieve.
-                    Additionally, using separate transmit and recieve paths allows for adding power amplifiers and low-noise amplifiers (as I do later on).
+                    they operate on slightly different frequencies to avoid interference, with pairs handling the transmit and receive respectively,
+                    this offers higher datarate and lower overhead compared to a single module setup switching between transmit and receive.
+                    Additionally, using separate transmit and receive paths allows for adding power amplifiers and low-noise amplifiers (as I do later on).
 
 
                   </p>
@@ -232,7 +233,7 @@
                       
                       To test the range of the LoRa modules I put my laptop with the ground-station breadboard
                       connected to my laptop on a balcony, and walked down the street in line-of-sight
-                      with the recieving test rig, and I was able to obtain a reliable range of 100m, and 
+                      with the receiving test rig, and I was able to obtain a reliable range of 100m, and 
                       a spotty connection up to 150m. While this is not good enough yet, it's much better,
                       and to improve the range further I designed custom PCBs with better power supplies,
                       and adding external power amplifiers to the LoRa modules.
@@ -241,14 +242,7 @@
                   </p>
                     
                     <img src="images/LoRaTest_3.JPG" alt="LoRa Custom PCB" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
-                  test rig with nRF24L01+ modules, teensy 4.0, rpi pico, servo controller,
-                  brushless dc motor, duct fan, iterative process with the failures of nrf24 to 
-                  moving over to LoRa, talk about multiple phsaes of pcb design including the nrf24 version
-                  with bulky power converters onboard, the streamliend version with a single 3.3v regulator
-                  using lora modules but it had an issue with the trace routing so I had to order a new pcb
-                  lessons learned about triple checking PCBs since waitign for a new one is a pain. also
-                  talk about testing engine performance, starting battery 2s vs new 3s battery and how that
-                  improved thurst
+    
 
                   <h4>Custom LoRa PCBs</h4>
                   <a>
@@ -266,13 +260,13 @@
                   antenna matching. Antenna matching is the process of choosing (or tuning) an antenna
                   to have the same impedance as the RF system driving it, and ensuring that the 
                   reflected power due to mismatch is low. A way of measuring this is with a Vector Network Analyzer (VNA).
-                  Professional VNA's cost thousands of dollars, but recently a few low-cost optionhave come to market,
-                  including the NanoVNA, of which I obtained the V2 varient with a working frequency range of 50kHz to 3GHz, plenty
+                  Professional VNA's cost thousands of dollars, but recently a few low-cost option have come to market,
+                  including the NanoVNA, of which I obtained the V2 variant with a working frequency range of 50kHz to 3GHz, plenty
                   for my current and future RF projects.
                   Using my NanoVNA I was able to learn that my provided antennas for the LoRas were not quite optimal
                   (resulting in a transmit power reduction of approx 30%).
                   This information allowed me to inform a decision to buy a set of verified 433MHz 50Ohm antennas
-                  from a reputable manufacterer through DigiKey. An example of using the VNA to measure an antenna is shown below.
+                  from a reputable manufacturer through DigiKey. An example of using the VNA to measure an antenna is shown below.
                 </a>
                   <img src="images/NanoVNATest1.JPG" alt="Communication Pair" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
                   
@@ -280,7 +274,7 @@
                   <h4>Power Amplifier and Ground Station Enclosure</h4>
                   <a>
                     Since I will be using a power-amplifier for the transmitter on the ground station (and UAV),
-                    I needed to design an enclosure that includes adequte airflow to cool my 3W power amplifier,
+                    I needed to design an enclosure that includes adequate airflow to cool my 3W power amplifier,
                     and keep the ground station stable and secure during operation. The custom 3D printed enclosure with all electronics
                     assembled is shown below.
                     
@@ -288,7 +282,7 @@
 
                   </a>
 
-                <h3>Avoionics Firmware & Software Design Process</h3>
+                <h3>Avionics Firmware & Software Design Process</h3>
                 <h4>PC Control Software</h4>
                 <p>
                   The control software is a Windows application written in C++, using SFML for creating a simple GUI. It allows real-time control of the UAV via keyboard and mouse, while telemetry feedback is visualized on-screen. 

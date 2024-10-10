@@ -74,7 +74,7 @@
 
             As an Aerospace Engineering student, I'm passionate about space exploration and aviation, and while actually exploring
             space is a bit out of reach for me, I wanted to build a project to accurately point at objects in the sky. Anything from
-            satellites to stars, I wanted to be able to point at it accurately and automaticallyy, and so I built <b>AstroTargeter</b>.
+            satellites to stars, I wanted to be able to point at it accurately and automatically, and so I built <b>AstroTargeter</b>.
             The key features of this project are:
             <ul>
               <li>Highly precise 2DOF platform actuated by stepper motors</li>
@@ -106,31 +106,31 @@
             For completeness purposes, I would like to start with the V1 prototype, since the iterative design aspect of this project
             is a key part in the success of the final product. The V1 prototype was made shortly after getting my first 3D printer,
             and is based on a very preliminary knowledge of "good" electronic design. Even with all of these limitations,
-            the V1 prototype did successfully control the stepper motors to poiint in the right directions.
+            the V1 prototype did successfully control the stepper motors to point in the right directions.
 
             <img src="images/TargeterPrototypeV1.JPG" alt="Targeter V1" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
             The initial prototype implemented most of the key requirements, including 2 stepper motors, an accelerometer
             and gyroscope, as well as magnetometer. I two L298N motor drives to control the stepper motors, and a Raspberry Pi 3B.
-            Additionally, I solered up a proto-board to connect all the wires together, which resulted in quite a messy setup but it did work.
+            Additionally, I soldered up a proto-board to connect all the wires together, which resulted in quite a messy setup but it did work.
             For the gears, I used an all-3d-printed design, which was not very reliable and had a lot of backlash, particularly
             for the multi-stage gearbox for elevation control. The azimuth control was better, but not great. Additionally,
-            the Raspberry Pi 3B was not powerful enough for comofrtable remote-control and programming, which made the software
+            the Raspberry Pi 3B was not powerful enough for comfortable remote-control and programming, which made the software
             aspect harder to work on. Finally, I simply wasn't happy with the overall look of the prototype, and wanted to make
             a much more sleek and refined design for the V2 prototype.
             
             
             <h2> Improved Gears </h2>
-            The aspect of interation from V1 to V2 that I wanted to address was the backlash in the gears. 
+            The aspect of iteration from V1 to V2 that I wanted to address was the backlash in the gears. 
             This was a major issue in the V1 prototype which limited the precision of the platform greatly.
             I used a series of of-the-shelf gears purchased for a few dollars each, coupled with lock-collars, bearings, and 
             steel shafts cut to length using an angle-grinder and a vice. Although simple, the use of solid metal gears 
-            and stabilizing bearings resulted in a signficant improvement, with effectively zero backlash in the elevation control.
+            and stabilizing bearings resulted in a significant improvement, with effectively zero backlash in the elevation control.
             The elevation gearbox is shown below.
             <img src="images/TargeterImprovedGears.JPG" alt="Improved Gear System" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
-            Additionally, the azumith control was improved with a similar system. While I could not purchase a large enough gear
-            off-the-shelf to make both parts of the azumith system work, I was able to use a metal gear for the stepper-stage and
+            Additionally, the azimuth control was improved with a similar system. While I could not purchase a large enough gear
+            off-the-shelf to make both parts of the azimuth system work, I was able to use a metal gear for the stepper-stage and
             then 3D print the large gear with tight tolerances to ensure a snug fit. This resulted in a much more reliable and 
-            backlash-free system for the azimuth control. The improved azumith hybrid-gear system is shown below.
+            backlash-free system for the azimuth control. The improved azimuth hybrid-gear system is shown below.
             <img src="images/AzumithGearSystem.JPG" alt="Improved Gear System" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
             
             
@@ -160,9 +160,9 @@
             One of the issues I discovered with my electrical system, actually not related to the PCB, was that the stepper motor
             driver PCB's (DRV8825) were causing a lot of noise in the system, which was audible as an awful high pitched whine any time
             the stepper motors were on. After extensive research and tested, I determined that the reason was that certain stepper motor
-            models can make a whining sound due to harmonics in the driver when the driver is set to a particular "currennt chopping decay mode".
-            Digging deeper in the manufacterer's datasheet and probing the driver with a multimeter revealed that the decay mode was set to "mixed",
-            which was causing the noise for my motors, and a more reliable decay mode for my motors was "slow". Unforunately the DRV8825 breakout
+            models can make a whining sound due to harmonics in the driver when the driver is set to a particular "current chopping decay mode".
+            Digging deeper in the manufacturer's datasheet and probing the driver with a multimeter revealed that the decay mode was set to "mixed",
+            which was causing the noise for my motors, and a more reliable decay mode for my motors was "slow". Unfortunately the DRV8825 breakout
             board that I was using had no way to change the decay mode, so I had to manually solder a 0.4mm wire to the decay mode pin on the DRV8825.
             This was a very delicate operating, taking me an hour total for both modules, but once it was done, the noise was gone! Below is an
             image to give you an idea of what I did.
@@ -174,7 +174,7 @@
             It's not very interesting so I will not go into detail, but generally I did some weight reduction, aesthetic improvements,
             and obviously had to redesign the frame to fit the new gears and PCB. The final frame is shown in the first image of this page.
             The one thing I will say is that I chose to go with a hexagonal design for most frame components for weight-reduction as well as 
-            stylistic reasons. Take a moment to appriciate the beauty of the hexagon, and how it is used in the frame design below.
+            stylistic reasons. Take a moment to appreciate the beauty of the hexagon, and how it is used in the frame design below.
             
             <img src="images/HexagonDesignPic1.jpg" alt="Soldered Astro PCB" style="width: 100%; max-width: 600px; margin-top: 10px; margin-bottom: 10px; display: block;">
             
@@ -185,9 +185,9 @@
             
             
             The software aspect of this project is divided into two sections. Low-level control of the stepper motors and sensors, and high-level
-            astronomical calcualtions and interfacing. Since this platform does not need absolute realtime control, I opted to use Python for 
+            astronomical calculations and interfacing. Since this platform does not need absolute realtime control, I opted to use Python for 
             ease of development and readability. I built a custom stepper motor controller which interfaces with the DRV8825 drivers and 
-            allows calculations for microstepping, gear reductions, constant acceleration and decelleration, precise positioning, and 
+            allows calculations for micro-stepping, gear reductions, constant acceleration and deceleration, precise positioning, and 
             dynamic speed limits for movements. This was integrated with a sensor fusion library that I also made custom to integrate
             all the readings from the magnetometer (to measure Earth's magnetic field as a digital compass), the accelerometer and gyroscope 
             (to measure the platform's orientation relative to Earth's surface), and the GPS (to measure the platform's location on Earth and
