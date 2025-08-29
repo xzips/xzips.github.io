@@ -73,7 +73,7 @@ AOS.init({
 			autoplayHoverPause: false,
 			items: 1,
 			navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-			autoplayTimeout: 5000,   // delay between slides (ms)
+			autoplayTimeout: 4000,   // delay between slides (ms)
 			smartSpeed: 1500,        // animation speed (ms)
 			responsive:{
 			  0:{ items:1 },
