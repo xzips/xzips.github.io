@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GPU EM Solver | Aspen Erlandsson</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/_slug_.g6gHRgPj.css">
+<link rel="stylesheet" href="/_astro/index.CqwNwqBU.css"></head> <body class="bg-slate-950 text-slate-100 antialiased"> <div class="pointer-events-none fixed inset-0 -z-10 opacity-40"> <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.18),transparent_25%)]"></div> <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(129,140,248,0.12),transparent_22%)]"></div> <div class="absolute inset-0 bg-[radial-gradient(circle_at_10%_80%,rgba(52,211,153,0.12),transparent_30%)]"></div> </div> <main class="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16 pt-10 sm:px-6 lg:px-8"> <div class="flex items-center justify-between gap-3"> <a class="inline-flex items-center gap-2 text-sm font-semibold text-sky-200 transition hover:text-sky-100" href="/#projects"> <span aria-hidden="true">←</span> Back to projects
+</a> </div> <section class="relative overflow-hidden rounded-3xl border border-white/8 bg-slate-950/90 p-6 shadow-2xl backdrop-blur sm:p-10"> <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/60 via-sky-300/45 to-emerald-400/60 opacity-20"></div> <div class="relative space-y-8">  <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"> <div class="space-y-2"> <h1 class="text-2xl font-bold text-slate-50 sm:text-3xl">GPU EM Solver</h1> <p class="max-w-3xl text-sm leading-relaxed text-slate-300/90">GPU-accelerated FDTD solver matching CST/MATLAB accuracy. Reduced simulation time of a 4x4 array from 222h (CPU) to 6.8h (GPU).</p> </div> <div class="flex flex-wrap gap-2 sm:justify-end"> <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"> CUDA / C++ / Python </span> <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-400"> 25x speedup </span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-400"> 17 GCell/s </span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-400"> 10k lines C++ </span> </div> </div> <div class="h-px w-full bg-white/5"></div> <div class="prose prose-invert max-w-none prose-headings:text-slate-100 prose-p:text-slate-300 prose-a:text-sky-300 hover:prose-a:text-sky-200 prose-strong:text-slate-50 prose-code:text-sky-200 prose-pre:bg-slate-950/50 prose-pre:border prose-pre:border-white/10"> <script type="module">document.querySelectorAll(".video-wrapper").forEach(o=>{const e=o.querySelector("video"),c=o.querySelector(".video-indicator span");e&&c&&o.addEventListener("click",i=>{i.target===e&&e.controls||(e.paused?(e.play(),c.className="icon-pause"):(e.pause(),c.className="icon-play"))})});</script> <section class="page" data-astro-cid-74l4mofh> <div class="container" data-astro-cid-74l4mofh> <section class="hero-crop" aria-label="Project hero" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/em_gpu_hero.Dr1WhDVL.mp4" type="video/mp4" data-astro-cid-74l4mofh>
+Your browser does not support the video tag.
+</video> <div class="hero-overlay" data-astro-cid-74l4mofh></div> <div class="hero-title" data-astro-cid-74l4mofh> <h1 class="mb-3 bread" data-astro-cid-74l4mofh>GPU-Accelerated Electromagnetic Wave Solver</h1> </div> </section> <section class="summary" data-astro-cid-74l4mofh> <div class="card" data-astro-cid-74l4mofh> <h4 class="kicker" data-astro-cid-74l4mofh>Technical focus</h4> <ul class="bullets" data-astro-cid-74l4mofh> <li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Build a GPU-first FDTD solver that can handle my 5.4GHz 4x4 patch array when CST/HFSS/OpenEMS cannot.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Stay bit-for-bit matched to a single threaded CPU reference while validating against CST Microwave Studio, Mathworks RF PCB Toolbox, and analytical microstrip cases.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Optimize memory bandwidth with a structure-of-arrays layout, coalesced access, and Nsight-informed kernel optimization.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Benchmark both MUR and PML8 boundaries and run a broad PCB-focused validation suite before multi-GPU tiling.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Plan radiation capture, dedicated per-region kernels, and multi-GPU domain splitting after the single GPU path is fully optimized.</span> </li> </ul> </div> <div class="card" data-astro-cid-74l4mofh> <h4 class="kicker" data-astro-cid-74l4mofh>Results</h4> <ul class="bullets" data-astro-cid-74l4mofh> <li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>17 GCell/s (28x faster) with MUR and 6.5 GCell/s (32x) with PML8 on a 5070 Ti vs OpenEMS on a Ryzen 9950X.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>For the 4x4 patch array saw a drop from 222 hours in OpenEMS to 6.8 hours on my solver.</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Outputs match my CPU reference while reproducing CST Microwave Studio (bandpass filter) and Mathworks RF PCB Toolbox (bandstop filter).</span> </li><li class="bullet-row" data-astro-cid-74l4mofh> <span class="dot" data-astro-cid-74l4mofh></span> <span data-astro-cid-74l4mofh>Validated six benchmark geometries with research/Mathworks overlays and rendered fields in ParaView; solver scales well with GPU memory bandwidth.</span> </li> </ul> </div> <div class="card stack" data-astro-cid-74l4mofh> <h4 class="kicker" data-astro-cid-74l4mofh>Stack</h4> <div class="chips" data-astro-cid-74l4mofh> <span class="chip" data-astro-cid-74l4mofh>C++</span><span class="chip" data-astro-cid-74l4mofh>CUDA</span><span class="chip" data-astro-cid-74l4mofh>Nvidia Nsight Compute</span><span class="chip" data-astro-cid-74l4mofh>OpenEMS</span><span class="chip" data-astro-cid-74l4mofh>ParaView (VTK)</span><span class="chip" data-astro-cid-74l4mofh>FDTD</span><span class="chip" data-astro-cid-74l4mofh>FFT</span> </div> </div> </section> <section class="writeup-wrap" data-astro-cid-74l4mofh> <div class="writeup" data-astro-cid-74l4mofh> <h2 data-astro-cid-74l4mofh>Performance vs. State of the Art</h2> <p data-astro-cid-74l4mofh>
+OpenEMS is unacceptably slow. On a modern Ryzen 9950X CPU, it runs my benchmark cases at roughly 200MCell/s (using proper PML boundary conditions).
+</p> <p data-astro-cid-74l4mofh>
+In contrast, my custom solver running on an $800 consumer graphics card (5070 Ti) achieves:
+</p> <ul data-astro-cid-74l4mofh> <li data-astro-cid-74l4mofh><strong data-astro-cid-74l4mofh>17GCell/s, 28x faster</strong>, using approximate MUR boundary conditions</li> <li data-astro-cid-74l4mofh><strong data-astro-cid-74l4mofh>6.5GCell/s, 32x faster</strong>, using proper PML8 boundary conditions</li> </ul> <p data-astro-cid-74l4mofh>
+This represents a collapse in simulation time from <strong data-astro-cid-74l4mofh>222 hours</strong> (a week and a half) down to <strong data-astro-cid-74l4mofh>6.8 hours</strong> (same day results).
+</p> <p data-astro-cid-74l4mofh>
+With open-source software clearly crushed, the gloves are coming off, and I'm going after a comparison to the world's current fastest FDTD EM solver - Empire XPU. Empire XPU is a commercial software out of Germany, produced and maintained by IMST GmbH. They regularly post speed records on Linkedin using ludicrous setups such as dual 128-core Epyc CPUs with speeds peaking just under 150GCell/s
+<a href="https://www.linkedin.com/posts/martamartinez_empirexpu-electromagneticsimulation-engineeringinnovation-activity-7404067129404268544-v6SO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENZHR0B9uCXgyKLkjgMDdhjXSo7QeCovk8" target="_blank" rel="noopener noreferrer" data-astro-cid-74l4mofh>
+[link]
+</a>.
+</p> <img class="media-half" src="/_astro/empire_xpu_speeds.C-yu4puF.jpg" alt="Empire XPU speed chart" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>
+For reference, that CPU setup costs (NOT including any RAM or motherboard, etc), around $26,000USD. Given the hardware component driving my speeds is 32x cheaper, but my code is only 9x slower, and parallelizable, I smell blood in the water.
+</p> <p data-astro-cid-74l4mofh>
+Unlike OpenEMS, my solver scales with GPU memory bandwidth which is one of the fastest growing performance metrics in hardware, can be split across GPUs to further multiply speed.
+</p> <h2 data-astro-cid-74l4mofh>Validating my solver's accuracy</h2> <p data-astro-cid-74l4mofh>
+Speed means nothing if the math is wrong. Before setting any world-records, I had to validate that my solver is producing CORRECT outputs, not just randomly mashing around cells really quickly.
+</p> <p data-astro-cid-74l4mofh>
+I executed a solid plan to accomplish this - first set up a benchmark suite of multiple "standard" microwave circuit geometries with well-known analytical solutions, and second reproduce at least 1 non-trivial result from an EM/RF research paper and 1 non-trivial result from a commercial solver.
+</p> <table class="bench-table" aria-label="Benchmark suite table" data-astro-cid-74l4mofh> <thead data-astro-cid-74l4mofh> <tr data-astro-cid-74l4mofh> <th data-astro-cid-74l4mofh>Benchmark / reference</th> <th data-astro-cid-74l4mofh>Preview</th> </tr> </thead> <tbody data-astro-cid-74l4mofh> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>6GHz microstrip patch antenna</td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/PATCH6G_geometry.CsRkMaha.jpg" alt="6GHz microstrip patch antenna preview" data-astro-cid-74l4mofh></td> </tr> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>6GHz microstrip patch antenna with quarter-wave transformer feed (QWT)</td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/PATCH6GQWT_geometry.C5WNZMIK.jpg" alt="6GHz patch antenna with QWT preview" data-astro-cid-74l4mofh></td> </tr> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>Open microstrip</td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/OPEN_geometry.DcSKC-ZT.jpg" alt="Open microstrip preview" data-astro-cid-74l4mofh></td> </tr> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>Microstrip with open stub on the side</td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/STUB_geometry.DTjGkJwq.jpg" alt="Microstrip stub preview" data-astro-cid-74l4mofh></td> </tr> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>
+A research paper optimizing a microstrip coupled bandpass filter using CST Microwave Studio.
+<a href="https://www.researchgate.net/publication/256461502_Designing_a_Microstrip_coupled_line_bandpass_filter" target="_blank" rel="noopener noreferrer" data-astro-cid-74l4mofh>[link]</a> </td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/BPF_geometry.BFUkM9uz.jpg" alt="Research paper coupled bandpass filter preview" data-astro-cid-74l4mofh></td> </tr> <tr data-astro-cid-74l4mofh> <td data-astro-cid-74l4mofh>
+An official example from Mathworks which applies the MATLAB RF PCB Toolbox to evaluate an open stub-based bandstop microstrip filter.
+<a href="https://www.mathworks.com/help/rfpcb/ug/design-and-analyze-band-stop-filter-using-pcbcomponent.html" target="_blank" rel="noopener noreferrer" data-astro-cid-74l4mofh>[link]</a> </td> <td data-astro-cid-74l4mofh><img class="bench-preview" src="/_astro/BSF_geometry.By27C4iI.jpg" alt="Mathworks RF PCB Toolbox example preview" data-astro-cid-74l4mofh></td> </tr> </tbody> </table> <p data-astro-cid-74l4mofh>
+I will state the obvious - all of these benchmarks only test planar PCB structures. This is because of two reasons, 1) my actual use case for this solver is mostly PCB simulations, and 2) it's easier to use analytical equations to predict planar structures than arbitrary geometry, so validation becomes more reliable. However, the solver has absolutely no internal limitation on the geometry structure.
+</p> <h3 data-astro-cid-74l4mofh>Benchmark 1: 6GHz Microstrip Antenna</h3> <p data-astro-cid-74l4mofh>
+We expect a dip in S11 at 6GHz. In the plot below we observe precisely this trend, with a second resonance higher up in frequency.
+</p> <img class="media-half" src="/_astro/s11_benchmark_patch_6g.DtzQfzpx.png" alt="6GHz antenna S11 plot" data-astro-cid-74l4mofh> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/PATCH6G_output1080.C92hzB8f.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h3 data-astro-cid-74l4mofh>Benchmark 2: 6GHz Antenna w/ Quarter-Wave Transformer</h3> <p data-astro-cid-74l4mofh>
+The same 6GHz antenna now paired with a QWT matching strategy should exhibit much better S11 at the target frequency of 6GHz. The plot below precisely confirms this expectation.
+</p> <img class="media-half" src="/_astro/s11_benchmark_patch_6g_qwt.pmdTlmw1.png" alt="6GHz QWT antenna S11 plot" data-astro-cid-74l4mofh> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/PATCH6GQWT_output1080.CRYKuI4i.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h3 data-astro-cid-74l4mofh>Benchmark 3: Open Microstrip</h3> <p data-astro-cid-74l4mofh>
+For an open microstrip geometry we expect a flat response of nearly 0db at lower-medium frequencies. Higher frequencies will see attenuation in S11 as the open microstrip edge behaves like an antenna.
+</p> <img class="media-half" src="/_astro/s11_benchmark_msl_open.B2LFb3jU.png" alt="Open microstrip S11 plot" data-astro-cid-74l4mofh> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/OPEN_output1080.DQG-o5jg.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h3 data-astro-cid-74l4mofh>Benchmark 4: Microstrip Stub</h3> <p data-astro-cid-74l4mofh>
+Considering a stub characteristic length of 10mm feed coming off a 2.67mm wide feed we can expect interesting effects near the characteristic quarter wave length (8.7mm, the distance from the stub edge to center of feed due to how geometry is defined). A quick hand calculation shows the quarter wave frequency with eps_r =4.5 and h=1.5mm is 4.7GHz:
+</p> <div class="math-block" data-astro-cid-74l4mofh>
+$$
+\begin{align}
+\varepsilon_{\text{eff}} &= \frac{\varepsilon_r + 1}{2} + \frac{\varepsilon_r - 1}{2} \left(1 + 12\frac{h}{W}\right)^{-1/2} \\
+&= \frac{4.5 + 1}{2} + \frac{4.5 - 1}{2} \left(1 + 12\frac{1.5}{2.67}\right)^{-1/2} \approx 3.38 \\
+v_p &= \frac{c_0}{\sqrt{\varepsilon_{\text{eff}}}} \approx \frac{3.0\times10^8}{\sqrt{3.38}} \approx 1.63\times 10^8\ \text{m/s} \\
+f_{\lambda/4} &= \frac{v_p}{4 L} \approx \frac{1.63\times 10^8}{4 \times 8.7\times 10^{-3}} \approx 4.7\ \text{GHz}
+\end{align}
+$$
+</div> <p data-astro-cid-74l4mofh>And inspecting our plot below, we see a sharp dip in S11 precisely near 4.7GHz, with a second resonance higher up in frequency. Fantastic.</p> <img class="media-half" src="/_astro/s11_benchmark_msl_stub.BVY6vCHu.png" alt="Microstrip stub S11 plot" data-astro-cid-74l4mofh> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/STUB_output1080.BqEzBIps.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h3 data-astro-cid-74l4mofh>Replicating Research: 5-7GHz Coupled Bandpass Filter vs CST Microwave Studio</h3> <p data-astro-cid-74l4mofh>
+In this research paper "Designing a Microstrip coupled line bandpass filter",
+<a href="https://www.researchgate.net/publication/256461502_Designing_a_Microstrip_coupled_line_bandpass_filter" target="_blank" rel="noopener noreferrer" data-astro-cid-74l4mofh>[link]</a>
+the author (Ragani Taoufik) presents a design with excellent wideband performance between 5-7GHz for WLAN and other applications.
+</p> <img class="media-half" src="/_astro/cst_bpf_geometry.1_k5t-Ei.jpg" alt="Geometry from paper" data-astro-cid-74l4mofh> <img class="media-half" src="/_astro/BPF_geometry.BFUkM9uz.jpg" alt="Geometry from my solver" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>
+I extracted the numerical points from Ragani Taoufik's work into a csv file using WebPlotDigitizer. Finally, running the geometry through my simulator with the same material properties as described in the paper we obtain the comparison S11 plot below:
+</p> <img class="media-half" src="/_astro/s11_benchmark_coupled_microstrip_bandpass_filter.Chnlrm6u.png" alt="S11 comparison plot for CST vs mine" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>
+Inspecting the plot, we see a <strong data-astro-cid-74l4mofh>near identical match</strong> in outputs between CST and my solver. Overall, excellent match to the reference.
+</p> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/BPF_output1080.BeoIPHhp.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h3 data-astro-cid-74l4mofh>Replicating Industry: Open Stub Bandstop Filter vs MATLAB RF PCB Toolbox</h3> <p data-astro-cid-74l4mofh>
+Mathworks provides official usage examples for their RF PCB Toolbox. I set up the presented geometry in my solver, and used WebPlotDigitizer to save the MATLAB result as CSV to overlay with my output.
+</p> <img class="media-half" src="/_astro/matlab_bsf_geometry.CZrJjKT1.jpg" alt="Geometry from Mathworks website" data-astro-cid-74l4mofh> <img class="media-half" src="/_astro/BSF_geometry.By27C4iI.jpg" alt="Geometry from my solver" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>Running the solver with the presented material properties and board stackup, we obtain the following S11 comparison plot:</p> <img class="media-half" src="/_astro/s11_benchmark_stopband_filter_matlab.BzVqJT9M.png" alt="S11 comparison plot for MATLAB RF PCB Toolbox vs mine" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>
+Comparing the plot results, we can see that my solver mostly agrees with RF PCB Toolbox in the areas of bandwidth, frequency range and S11 magnitude. There is an apparent frequency offset in the S21 dip and S11 flat area in the stopband of a few hundred MHz. The exact reason for this disagreement is not clear to me, but <strong data-astro-cid-74l4mofh>given that my solver agrees well with CST</strong> I am inclined to believe that my solver is actually more correct than the RF PCB Toolbox in this instance.
+</p> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/BSF_output1080.DZlIPeiC.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <h2 data-astro-cid-74l4mofh>Project Origin: The "Why"</h2> <p data-astro-cid-74l4mofh>
+With the performance and accuracy established, I want to explain why I started this project in the first place.
+</p> <p data-astro-cid-74l4mofh>
+After my first real RF project, my FMCW radar, I wanted to make an improved version using a high gain patch antenna array on-PCB rather than externally mounted, and I also wanted to nearly double the frequency to 5.4GHz. With these goals in mind, I looked for a suitable software package to simulate the radiation patterns, and scattering parameters. As a student at U of T my first choice was ANSYS HFSS - but after downloading and trying to build my problem I quickly found that the student-license limitations were too strict, the number of mesh cells permitted simply couldn't describe my 16-element 4x4 array, pictured below.
+</p> <img class="media-third" src="/_astro/patch_array_4x4.DvkUEmEt.jpg" alt="4x4 PCB patch array" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>
+So, in search of an open source alternative I settled on "OpenEMS"
+<a href="https://openems.de" target="_blank" rel="noopener noreferrer" data-astro-cid-74l4mofh>[link]</a>, which has no artificial domain or resolution limitations. OpenEMS is a neat project, and I spent ~1 month learning how to use the Python interface and optimize my problem definition to simulate up to a 2x2 patch antenna array at my desired frequency. The video below shows the surface current density on a 2x2 patch antenna array I simulated.
+</p> <div class="video-wrapper" data-astro-cid-74l4mofh> <video autoplay muted loop playsinline data-astro-cid-74l4mofh> <source src="/_astro/patch_array_2x2_openemsVideo.DYxDFnq2.mp4" type="video/mp4" data-astro-cid-74l4mofh> </video> <div class="video-indicator" title="Pause/Play" data-astro-cid-74l4mofh> <span class="icon-pause" data-astro-cid-74l4mofh></span> </div> </div> <p data-astro-cid-74l4mofh>
+However, because OpenEMS runs on CPU-only, unfortunately my 5.4GHz, 4x4 patch antenna array is still out of reach. To put the computational cost in perspective:
+</p> <ul data-astro-cid-74l4mofh> <li data-astro-cid-74l4mofh>200mm x 200mm x 40mm = 2500 cells x 2500 cells x 500 cells</li> <li data-astro-cid-74l4mofh>1.6 Billion cells</li> <li data-astro-cid-74l4mofh>Assume we need 100k timesteps for the structure to ring out fully</li> <li data-astro-cid-74l4mofh>160 Trillion cell updates required</li> <li data-astro-cid-74l4mofh>Assume 200MCell/s rate (OpenEMS peak)</li> <li data-astro-cid-74l4mofh><strong data-astro-cid-74l4mofh>222 hours = a week and a half</strong> running at max speed just to get one result.</li> </ul> <p data-astro-cid-74l4mofh>
+That's when I decided - I need to make my own EM solver built for GPU-first with aggressive optimization, while ensuring results match industry standard tools.
+</p> <h2 data-astro-cid-74l4mofh>Implementation Details & Theory</h2> <p data-astro-cid-74l4mofh>
+I used multiple textbook references and wrote my solver from first principles - not polluting my mind with implementation-specifics of other solvers. The first implementation was a very basic C++ program running single threaded on the CPU to set a functional baseline, and then I scaled to CUDA GPU shortly after getting that working.
+</p> <h3 data-astro-cid-74l4mofh>Brief background on the FDTD method</h3> <p data-astro-cid-74l4mofh>
+OpenEMS uses an approach called Finite-Difference Time-Domain (FDTD). By injecting a broadband pulse excitation into microwave structures the return reflections can be measured, and a Fast Fourier Transform (FFT) performed to recover the response over ultra wide frequency bands. The core principle of FDTD relies on the Yee cell grid structure, where the magnetic field components sit on cell faces, and electric field components sit on cell edges. The diagram below (not mine!) illustrates this principle.
+</p> <img class="media-third" src="/_astro/yee_cell_diagram.rA4w2p3h.jpg" alt="FDTD Yee cell diagram" data-astro-cid-74l4mofh> <p data-astro-cid-74l4mofh>Starting with Maxwell's equations:</p> <div class="math-block" data-astro-cid-74l4mofh>
+$$
+\begin{align}
+\frac{\partial \mathbf{E}}{\partial t} &= \frac{1}{\varepsilon_0}\,\nabla \times \mathbf{H} - \frac{\sigma}{\varepsilon_0}\,\mathbf{E} \\
+\frac{\partial \mathbf{H}}{\partial t} &= -\frac{1}{\mu_0}\,\nabla \times \mathbf{E}
+\end{align}
+$$
+</div> <p data-astro-cid-74l4mofh>
+And define a standard Yee grid with time staggering where E and H updates are offset by half a timestep. More explicitly, define the grid as:
+</p> <div class="math-block" data-astro-cid-74l4mofh>
+$$
+\begin{array}{lll}
+\hline
+\textbf{Quantity} & \textbf{Stored index} & \textbf{Physical location} \\
+\hline
+E_x(i,j,k) & \texttt{Ex[i,j,k]} & \left(i+\tfrac{1}{2},\, j,\, k\right) \\
+E_y(i,j,k) & \texttt{Ey[i,j,k]} & \left(i,\, j+\tfrac{1}{2},\, k\right) \\
+E_z(i,j,k) & \texttt{Ez[i,j,k]} & \left(i,\, j,\, k+\tfrac{1}{2}\right) \\
+H_x(i,j,k) & \texttt{Hx[i,j,k]} & \left(i,\, j+\tfrac{1}{2},\, k+\tfrac{1}{2}\right) \\
+H_y(i,j,k) & \texttt{Hy[i,j,k]} & \left(i+\tfrac{1}{2},\, j,\, k+\tfrac{1}{2}\right) \\
+H_z(i,j,k) & \texttt{Hz[i,j,k]} & \left(i+\tfrac{1}{2},\, j+\tfrac{1}{2},\, k\right) \\
+\hline
+\end{array}
+$$
+</div> <p data-astro-cid-74l4mofh>And discretize the update equations for each cell as follows:</p> <h3 data-astro-cid-74l4mofh>Electric field update</h3> <p data-astro-cid-74l4mofh>Where \(c_u\) are pre-calculated coefficients combining \(\Delta t\), \(\varepsilon_0\), \(\varepsilon_r\), and the cell dimensions.</p> <div class="math-block" data-astro-cid-74l4mofh>
+$$
+\begin{array}{ll}
+\hline
+\textbf{Component} & \textbf{Update equation} \\
+\hline
+E_x &
+E_x^{n+1}(i,j,k)
+=
+E_x^{n}(i,j,k)
++ c_y \big[ H_z^{n}(i,j,k) - H_z^{n}(i,j-1,k) \big]
+- c_z \big[ H_y^{n}(i,j,k) - H_y^{n}(i,j,k-1) \big]
+\\[1em]
+E_y &
+E_y^{n+1}(i,j,k)
+=
+E_y^{n}(i,j,k)
++ c_z \big[ H_x^{n}(i,j,k) - H_x^{n}(i,j,k-1) \big]
+- c_x \big[ H_z^{n}(i,j,k) - H_z^{n}(i-1,j,k) \big]
+\\[1em]
+E_z &
+E_z^{n+1}(i,j,k)
+=
+E_z^{n}(i,j,k)
++ c_x \big[ H_y^{n}(i,j,k) - H_y^{n}(i-1,j,k) \big]
+- c_y \big[ H_x^{n}(i,j,k) - H_x^{n}(i,j-1,k) \big]
+\\
+\hline
+\end{array}
+$$
+</div> <h3 data-astro-cid-74l4mofh>Magnetic field update</h3> <p data-astro-cid-74l4mofh>Where \(tMU\) are pre-calculated coefficients combining \(\Delta t\), \(\mu_0\), and the cell dimensions.</p> <div class="math-block" data-astro-cid-74l4mofh>
+$$
+\begin{array}{ll}
+\hline
+\textbf{Component} & \textbf{Update equation} \\
+\hline
+H_x &
+H_x^{n+1}(i,j,k)
+=
+H_x^{n}(i,j,k)
++ tMUZ \big[ E_y^{n+1}(i,j,k+1) - E_y^{n+1}(i,j,k) \big]
+- tMUY \big[ E_z^{n+1}(i,j+1,k) - E_z^{n+1}(i,j,k) \big]
+\\[1em]
+H_y &
+H_y^{n+1}(i,j,k)
+=
+H_y^{n}(i,j,k)
++ tMUX \big[ E_z^{n+1}(i+1,j,k) - E_z^{n+1}(i,j,k) \big]
+- tMUZ \big[ E_x^{n+1}(i,j,k+1) - E_x^{n+1}(i,j,k) \big]
+\\[1em]
+H_z &
+H_z^{n+1}(i,j,k)
+=
+H_z^{n}(i,j,k)
++ tMUY \big[ E_x^{n+1}(i,j+1,k) - E_x^{n+1}(i,j,k) \big]
+- tMUX \big[ E_y^{n+1}(i+1,j,k) - E_y^{n+1}(i,j,k) \big]
+\\
+\hline
+\end{array}
+$$
+</div> <h3 data-astro-cid-74l4mofh>What actually makes my solver so fast?</h3> <p data-astro-cid-74l4mofh>
+As you can see, the update equations are arithmetically light (add, subtract, some multiply), but very memory-heavy, since we need to stream each field component of all cells into the CUDA thread each timestep. The memory access and bandwidth bottleneck is a critical highlight as to why GPUs are well suited to this task.
+</p> <p data-astro-cid-74l4mofh>My core design principles for the CUDA GPU implementation were:</p> <ul data-astro-cid-74l4mofh> <li data-astro-cid-74l4mofh><strong data-astro-cid-74l4mofh>Maintain bit-for-bit reproducibility</strong> to the single threaded CPU version</li> <li data-astro-cid-74l4mofh>Maximize coalesced memory access</li> <li data-astro-cid-74l4mofh>Maximize total memory throughput</li> <li data-astro-cid-74l4mofh>Use Nvidia Nsight Compute to profile, analyze, and iterate</li> </ul> <p data-astro-cid-74l4mofh>
+Achieving optimal coalesced memory access and pushing higher (useful) memory throughput on the GPU led me down a fun rabbit-hole of optimizing my core update kernels and memory layout, which I eventually settled on using a Structure of Arrays (SoA), with one array for each field component.
+</p> <p data-astro-cid-74l4mofh>
+I have considered commercializing this solver in some capacity due to its very high performance relative to open source and even commercial options, hence I will not disclose further details about GPU-specific optimization strategies.
+</p> <h2 data-astro-cid-74l4mofh>The next leap: Multi-GPU tiling</h2> <p data-astro-cid-74l4mofh>
+My sights are set on achieving a cell update speed <strong data-astro-cid-74l4mofh>higher than any posted by Empire XPU</strong>. I plan to accomplish this by implementing multi-GPU tiling where the simulation space is split across each device and some data is exchanged over the PCIe (or NVLink) bus between frames to synchronize the virtual boundary.
+</p> <p data-astro-cid-74l4mofh>
+However, before implementing the exciting multi-GPU tiling I am determined to work on a few aspects of the solver that will become harder to implement after multi-GPU tiling if I don't do them first:
+</p> <ul data-astro-cid-74l4mofh> <li data-astro-cid-74l4mofh>Radiation pattern capture using a Huygens surface for more antenna characterization</li> <li data-astro-cid-74l4mofh>Dedicated kernels per-region (optimized codepaths, less branches)</li> <li data-astro-cid-74l4mofh>Diamond time-space tiling (uncertain payoff because of added overhead, but want to explore)</li> <li data-astro-cid-74l4mofh>Optimize register/L1 cache reuse when rolling kernels along a particular axis</li> </ul> <p data-astro-cid-74l4mofh>
+After I have (at least attempted) the above, I will begin work on automated domain subdivision across devices, virtual boundary synchronization, and output consolidation. This writeup will be updated after all of that is completed, not incrementally.
+</p> <p data-astro-cid-74l4mofh>Reach out over email (Contact button) if you are interested in licensing my algorithms or hiring me😉.</p> </div> </section> </div> </section> <script type="module" src="/_astro/gpu-electromagnetic-wave-solver.astro_astro_type_script_index_1_lang.2DUTERfN.js"></script> </div> </div> </section> </main> </body></html>
